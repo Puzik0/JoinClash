@@ -10,6 +10,6 @@ namespace Infrastructure
         [SerializeField] private GameStateMachineSo _stateMachine;
 
         private void OnEnable() => 
-            _stateMachine.Enter<EnterGymStateSo>();
+            _stateMachine.Enter<BootStrapState>();
     }
 }
