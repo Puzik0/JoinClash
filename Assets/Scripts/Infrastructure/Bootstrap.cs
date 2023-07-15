@@ -1,15 +1,21 @@
 ﻿using GameStates.Base;
 using GameStates.States;
-using System.Collections;
+using StaticContext;
 using UnityEngine;
 
 namespace Infrastructure
 {
     public class Bootstrap : MonoBehaviour
     {
-        [SerializeField] private GameStateMachineSo _stateMachine;
+        [SerializeField] private GameStateMechineFactory _stateMachineFactory;
 
-        private void OnEnable() => 
-            _stateMachine.Enter<BootStrapState>();
+        private void OnEnable()
+        {
+            IGameStateMachine stateMachine = _stateMachineFactory.initialize();
+
+            Instance<IGameStateMachine>.Value = stateMachine;
+
+            stateMachine.Enter<BootStrapState>();
+        }
     }
 }
