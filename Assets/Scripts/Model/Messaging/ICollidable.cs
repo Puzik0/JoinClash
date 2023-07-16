@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Model.Physics
+namespace Model.Messaging
 {
 	public interface ICollidable
 	{

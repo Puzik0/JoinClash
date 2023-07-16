@@ -1642,9 +1642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe24710a8ec4487b906b268087999bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceBetweenBounds: 0
-  _maxMovementSpeed: 0
-  _accelerationTime: 0
+  _distanceBetweenBounds: 9.6
+  _maxMovementSpeed: 10
+  _accelerationTime: 0.3
   _controller: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
   _playerView: {fileID: 2632625988852090727}
   _otherViews:

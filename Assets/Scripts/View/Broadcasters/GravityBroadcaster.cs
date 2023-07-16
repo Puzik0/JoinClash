@@ -2,7 +2,7 @@
 using Model.Physics;
 using UnityEngine;
 
-namespace Sources.View
+namespace View.Sources.View.Broadcasters
 {
 	[RequireComponent(typeof(Rigidbody))]
 	public class GravityBroadcaster : MonoBehaviour

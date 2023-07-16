@@ -1,7 +1,7 @@
-﻿using Model.Physics;
+﻿using Model.Messaging;
 using UnityEngine;
 
-namespace Sources.View
+namespace View.Sources.View.Broadcasters
 {
 	public class CollisionBroadcaster : MonoBehaviour
 	{

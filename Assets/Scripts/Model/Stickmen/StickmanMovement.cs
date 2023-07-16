@@ -25,6 +25,8 @@ namespace Model.Stickmen
 
 		public bool OnLeftBound => Math.Abs(_stickman.Position.x - -DistanceToBound) < 0.1f;
 
+		public float Acceleration => _inertialMovement.Acceleration;
+		
 		private float DistanceToBound => _distanceBetweenBounds / 2.0f;
 		
 		public void StartMovingRight()
