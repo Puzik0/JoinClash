@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Model.StateMachine
 {
 	public class StickmanStateMachine : ITickable
 	{
+		private readonly Animator _animator;
+		
 		private readonly Dictionary<Type, StickmanState> _states = new Dictionary<Type, StickmanState>();
 		private StickmanState _currentState = new StickmanState.None();
 
-		public StickmanStateMachine(IEnumerable<StickmanState> states)
+		public StickmanStateMachine(Animator animator, IEnumerable<StickmanState> states)
 		{
+			_animator = animator;
+			
 			foreach (StickmanState stickmanState in states)
 			{
 				Type key = stickmanState.GetType();
@@ -29,9 +34,9 @@ namespace Model.StateMachine
 			if (_currentState == newState)
 				return;
 			
-			_currentState.Exit(this);
+			_currentState.Exit(_animator, this);
 			_currentState = newState;
-			_currentState.Enter(this);
+			_currentState.Enter(_animator, this);
 		}
 
 		public void Tick(float deltaTime)

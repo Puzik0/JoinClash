@@ -11,11 +11,13 @@ namespace View.Sources.View.Broadcasters
 		private Transformable _model;
 		private Gravity _gravity;
 		
-		public void Initialize(Transformable model)
+		public GameObject Initialize(Transformable model)
 		{
 			_attachedBody = GetComponent<Rigidbody>();
 			_model = model;
 			_gravity = new Gravity(model);
+
+			return gameObject;
 		}
 
 		private void FixedUpdate()

@@ -7,9 +7,11 @@ namespace Sources.View
 	{
 		private Transformable _model;
 
-		public void Initialize(Transformable model)
+		public GameObject Initialize(Transformable model)
 		{
 			_model = model;
+
+			return gameObject;
 		}
 
 		private void LateUpdate()

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sources.CompositionRoot
+namespace Sources.CompositeRoot.Base
 {
 	public abstract class CompositionRoot : MonoBehaviour
 	{
