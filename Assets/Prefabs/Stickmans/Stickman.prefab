@@ -794,10 +794,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7388972270694699884}
-  - component: {fileID: 5913476143752161671}
   - component: {fileID: 2263944232756495799}
   - component: {fileID: 2255669343257707024}
-  - component: {fileID: 5516678956160380727}
+  - component: {fileID: 7965904077485903067}
   m_Layer: 0
   m_Name: Stickman
   m_TagString: Untagged
@@ -821,25 +820,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5913476143752161671
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7908663499961158102}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!136 &2263944232756495799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -870,7 +850,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5516678956160380727
+--- !u!114 &7965904077485903067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -879,7 +859,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7908663499961158102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb7fd80f85fd6b9479a536cbd519f590, type: 3}
+  m_Script: {fileID: 11500000, guid: 380de7c3cd88401e853043e637c05681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7927846899915795085

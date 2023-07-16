@@ -5,17 +5,17 @@ using UnityEngine;
 
 namespace Infrastructure
 {
-    public class Bootstrap : MonoBehaviour
-    {
-        [SerializeField] private GameStateMechineFactory _stateMachineFactory;
+	public class Bootstrap : MonoBehaviour
+	{
+		[SerializeField] private GameStateMachineFactory _stateMachineFactory;
 
-        private void OnEnable()
-        {
-            IGameStateMachine stateMachine = _stateMachineFactory.initialize();
+		private void OnEnable()
+		{
+			IGameStateMachine stateMachine = _stateMachineFactory.Initialize();
 
-            Instance<IGameStateMachine>.Value = stateMachine;
+			Instance<IGameStateMachine>.Value = stateMachine;
 
-            stateMachine.Enter<BootStrapState>();
-        }
-    }
+			stateMachine.Enter<BootstrapState>();
+		}
+	}
 }

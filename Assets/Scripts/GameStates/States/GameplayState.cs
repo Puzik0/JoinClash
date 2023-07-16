@@ -1,30 +1,29 @@
 ﻿using GameStates.Base;
 using SceneLoading;
-using System.Collections;
 using UnityEngine;
 
-namespace Assets.Scripts.GameStates.States
+namespace GameStates.States
 {
-    public class GameplayState : IGameState
-    {
-        private readonly Scene _menu;
-        private readonly IAsyncSceneLoading _sceneLoading;
+	public class GameplayState : IGameState
+	{
+		private readonly Scene _menu;
+		private readonly IAsyncSceneLoading _sceneLoading;
 
-        public GameplayState(Scene menu, IAsyncSceneLoading sceneLoading)
-        {
-            _menu = menu;
-            _sceneLoading = sceneLoading;
-        }
+		public GameplayState(Scene menu, IAsyncSceneLoading sceneLoading)
+		{
+			_menu = menu;
+			_sceneLoading = sceneLoading;
+		}
 
-        public async void Enter()
-        {
-            await _sceneLoading.UnloadAsync(_menu);
-            Debug.Log("GameStarted");
-        }
+		public async void Enter()
+		{
+			await _sceneLoading.UnloadAsync(_menu);
+			
+			Debug.Log("Game Started!");
+		}
 
-        public void Exit()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+		public void Exit()
+		{
+		}
+	}
 }

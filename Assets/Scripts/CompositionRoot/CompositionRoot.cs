@@ -1,9 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Scripts.CompositionRoot
+namespace Sources.CompositionRoot
 {
-    public abstract class CompositionRoot : MonoBehaviour
-    {
-        public abstract void Compose();
-    }
+	public abstract class CompositionRoot : MonoBehaviour
+	{
+		public abstract void Compose();
+	}
 }

@@ -2,7 +2,7 @@
     "name": "Input",
     "rootNamespace": "",
     "references": [
-        "Model"
+        "GUID:11cfd0ac625bf81489f91fd2836b5e52"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

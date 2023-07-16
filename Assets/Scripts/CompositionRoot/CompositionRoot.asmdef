@@ -2,9 +2,9 @@
     "name": "CompositionRoot",
     "rootNamespace": "",
     "references": [
-        "GUID:c0bdd8c7ecfef4244ae0bc02bd248ff1",
-        "GUID:d7d8c6b6cb7b976488af3711845b5d4c",
-        "GUID:fd856d607713fb24dbc55bfd8bcf0732"
+        "GUID:11cfd0ac625bf81489f91fd2836b5e52",
+        "GUID:700ce3631b24e0c4bb74f05ba747f4bd",
+        "GUID:71c59d31c8ab4ee0804ce58f85483034"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
