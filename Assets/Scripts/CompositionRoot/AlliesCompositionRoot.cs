@@ -16,14 +16,20 @@ namespace Sources.CompositionRoot
 {
 	public class AlliesCompositionRoot : CompositionRoot
 	{
+		[Header("Run Setting")]
 		[SerializeField] private float _distanceBetweenBounds;
 		[SerializeField] private float _maxMovementSpeed;
 		[SerializeField] private float _accelerationTime;
 
+		[Header("Integrated Scripts")]
 		[SerializeField] private AnimatorController _controller;
-		
+		[SerializeField] private CapsuleCollider _pickTriggerZonePrefab;
+
+		[Header("Player")]
 		[SerializeField] private TransformableView _playerView;
-		[SerializeField] private TransformableView[] _otherViews = Array.Empty<TransformableView>();
+
+        [Header("Allies")]
+        [SerializeField] private TransformableView[] _otherViews = Array.Empty<TransformableView>();
 
 		private Dictionary<TransformableView, StickmanMovement> _placedEntities;
 

@@ -1646,6 +1646,7 @@ MonoBehaviour:
   _maxMovementSpeed: 10
   _accelerationTime: 0.3
   _controller: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
+  _pickTriggerZonePrefab: {fileID: 6639069702867901609, guid: 9e8c781130ce4164fbe691e4e801ff56, type: 3}
   _playerView: {fileID: 2632625988852090727}
   _otherViews:
   - {fileID: 2030607882}
@@ -3621,6 +3622,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
+    - target: {fileID: 6739774683405354396, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
       value: 13
