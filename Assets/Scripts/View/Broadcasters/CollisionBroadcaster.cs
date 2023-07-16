@@ -7,9 +7,10 @@ namespace View.Sources.View.Broadcasters
 	{
 		private ICollidable _model;
 
-		public void Initialize(ICollidable model)
+		public GameObject Initialize(ICollidable model)
 		{
 			_model = model;
+			return gameObject;
 		}
 
 		private void OnCollisionEnter(Collision other)

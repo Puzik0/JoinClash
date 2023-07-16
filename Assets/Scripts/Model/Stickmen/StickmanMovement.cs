@@ -6,24 +6,25 @@ namespace Model.Stickmen
 {
 	public class StickmanMovement
 	{
-		private readonly Stickman _stickman;
+		public readonly Stickman Model;
+		
 		private readonly SurfaceSliding _surfaceSliding;
 		private readonly InertialMovement _inertialMovement;
 		private readonly float _distanceBetweenBounds;
 		
 		private Vector3 _startMovePosition;
 		
-		public StickmanMovement(Stickman stickman, SurfaceSliding surfaceSliding, InertialMovement inertialMovement, float distanceBetweenBounds)
+		public StickmanMovement(Stickman model, SurfaceSliding surfaceSliding, InertialMovement inertialMovement, float distanceBetweenBounds)
 		{
-			_stickman = stickman;
+			Model = model;
 			_surfaceSliding = surfaceSliding;
 			_inertialMovement = inertialMovement;
 			_distanceBetweenBounds = distanceBetweenBounds;
 		}
 
-		public bool OnRightBound => Math.Abs(_stickman.Position.x - DistanceToBound) < 0.1f;
+		public bool OnRightBound => Math.Abs(Model.Position.x - DistanceToBound) < 0.1f;
 
-		public bool OnLeftBound => Math.Abs(_stickman.Position.x - -DistanceToBound) < 0.1f;
+		public bool OnLeftBound => Math.Abs(Model.Position.x - -DistanceToBound) < 0.1f;
 
 		public float Acceleration => _inertialMovement.Acceleration;
 		
@@ -31,7 +32,7 @@ namespace Model.Stickmen
 		
 		public void StartMovingRight()
 		{
-			_startMovePosition = _stickman.Position;
+			_startMovePosition = Model.Position;
 		}
 
 		public void MoveRight(float axis)
@@ -39,13 +40,13 @@ namespace Model.Stickmen
 			Vector3 position = new Vector3
 			{
 				x = _distanceBetweenBounds * axis + _startMovePosition.x,
-				y = _stickman.Position.y,
-				z = _stickman.Position.z
+				y = Model.Position.y,
+				z = Model.Position.z
 			};
 
 			position.x = Mathf.Clamp(position.x, -DistanceToBound, DistanceToBound);
 			
-			_stickman.Move(position);
+			Model.Move(position);
 		}
 
 		public void Accelerate(float deltaTime)
@@ -64,10 +65,10 @@ namespace Model.Stickmen
 
 		private void MoveForward(float deltaTime)
 		{
-			Vector3 directionAlongSurface = _surfaceSliding.DirectionAlongSurface(_stickman.Forward);
+			Vector3 directionAlongSurface = _surfaceSliding.DirectionAlongSurface(Model.Forward);
 			Vector3 delta = directionAlongSurface * (_inertialMovement.Acceleration * deltaTime);
 
-			_stickman.Move(_stickman.Position + delta);
+			Model.Move(Model.Position + delta);
 		}
 	}
 }

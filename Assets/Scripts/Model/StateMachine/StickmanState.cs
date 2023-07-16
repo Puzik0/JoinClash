@@ -4,23 +4,21 @@ namespace Model.StateMachine
 {
 	public abstract class StickmanState
 	{
-		private readonly Animator _animator;
 		private readonly int _animationHash;
 
-		protected StickmanState(Animator animator, int animationHash)
+		protected StickmanState(int animationHash)
 		{
 			_animationHash = animationHash;
-			_animator = animator;
 		}
 
-		public virtual void Enter(StickmanStateMachine stateMachine)
+		public virtual void Enter(Animator animator, StickmanStateMachine stateMachine)
 		{
-			_animator.SetBool(_animationHash, true);
+			animator.SetBool(_animationHash, true);
 		}
 
-		public virtual void Exit(StickmanStateMachine stateMachine)
+		public virtual void Exit(Animator animator, StickmanStateMachine stateMachine)
 		{
-			_animator.SetBool(_animationHash, false);
+			animator.SetBool(_animationHash, false);
 		}
 
 		public virtual void Tick(float deltaTime, StickmanStateMachine stateMachine)
@@ -30,20 +28,20 @@ namespace Model.StateMachine
 
 		protected virtual void CheckTransitions(StickmanStateMachine stateMachine)
 		{
-			
+
 		}
 
 		public class None : StickmanState
 		{
-			public None() : base(null, 0)
+			public None() : base(0)
 			{
 			}
 
-			public override void Enter(StickmanStateMachine stateMachine)
+			public override void Enter(Animator animator, StickmanStateMachine stateMachine)
 			{
 			}
 
-			public override void Exit(StickmanStateMachine stateMachine)
+			public override void Exit(Animator animator, StickmanStateMachine stateMachine)
 			{
 			}
 		}

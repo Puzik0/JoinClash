@@ -1,10 +1,15 @@
-﻿using Input;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Cinemachine;
+using Input;
 using Input.Stickmen;
 using Input.Touches;
 using Model.Stickmen;
+using Sources.CompositeRoot.Base;
+using Sources.View;
 using UnityEngine;
 
-namespace Sources.CompositionRoot
+namespace Sources.CompositeRoot
 {
 	public class HordeCompositionRoot : CompositionRoot
 	{
@@ -15,27 +20,37 @@ namespace Sources.CompositionRoot
 
 		[Header("Roots")]
 		[SerializeField] private AlliesCompositionRoot _allies;
+
+		[Header("Camera")]
+		[SerializeField] private CinemachineTargetGroup _targetGroup;
 		
 		private HordeInputRouter _inputRouter;
+		private HordeViewChanger _viewChanger;
+		private StickmanHorde _horde;
 
 		public override void Compose()
 		{
-			Horde = new StickmanHorde(_allies.Player);
-			StickmanHordeMovement hordeMovement = new StickmanHordeMovement(Horde);
-			
+			_horde = new StickmanHorde(_allies.Player);
+			var hordeMovement = new StickmanHordeMovement(_horde);
 			_inputRouter = new HordeInputRouter(_swipePanel, _touchPanel, hordeMovement, _camera);
+			_viewChanger = new HordeViewChanger(_horde, _targetGroup, _allies.PlacedEntities).Initialize();
 		}
 
-		public StickmanHorde Horde { get; private set; }
+		public IEnumerable<Stickman> Entities()
+		{
+			return _horde.Entities.Where(x => x.IsDead == false);
+		}
 
 		private void OnEnable()
 		{
 			_inputRouter.OnEnable();
+			_viewChanger.OnEnable();
 		}
 
 		private void OnDisable()
 		{
 			_inputRouter.OnDisable();
+			_viewChanger.OnDisable();
 		}
 	}
 }

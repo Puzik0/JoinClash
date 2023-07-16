@@ -7,9 +7,11 @@ namespace View.Sources.View.Broadcasters
 	{
 		private ITickable _tickable;
 
-		public void Initialize(ITickable tickable)
+		public GameObject Initialize(ITickable tickable)
 		{
 			_tickable = tickable;
+
+			return gameObject;
 		}
 
 		private void Update()
