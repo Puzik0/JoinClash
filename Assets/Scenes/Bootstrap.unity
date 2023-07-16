@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982146217}
-  - component: {fileID: 1982146216}
   - component: {fileID: 1982146218}
+  - component: {fileID: 1982146216}
   m_Layer: 0
   m_Name: Inicialization
   m_TagString: Untagged
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982146215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea402b4962681d489bff4712df58f42, type: 3}
+  m_Script: {fileID: 11500000, guid: b180179a1a524d2bbc6e4fb7db360f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _stateMachineFactory: {fileID: 1982146218}
@@ -177,12 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982146215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257d63522534901458dfa43a8946891e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b511fd1a69c4b5cbe8f16c9adeb9358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Level:
+  _level:
     Name: Gym
     LoadMode: 0
   _menu:
     Name: Menu
-    LoadMode: 1
+    LoadMode: 0
