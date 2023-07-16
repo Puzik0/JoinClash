@@ -21,7 +21,6 @@ namespace Model.StateMachine
 		public virtual void Exit(StickmanStateMachine stateMachine)
 		{
 			_animator.SetBool(_animationHash, false);
-			
 		}
 
 		public virtual void Tick(float deltaTime, StickmanStateMachine stateMachine)
