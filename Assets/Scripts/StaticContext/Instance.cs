@@ -1,8 +1,7 @@
-﻿
-namespace StaticContext
+﻿namespace StaticContext
 {
-    public static class Instance<T>
-    {
-        public static T Value;
-    }
+	public static class Instance<T>
+	{
+		public static T Value;
+	}
 }

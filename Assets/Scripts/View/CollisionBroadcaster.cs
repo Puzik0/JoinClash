@@ -1,30 +1,30 @@
-using Model.Physics;
+﻿using Model.Physics;
 using UnityEngine;
 
-namespace Scripts.View
+namespace Sources.View
 {
-    public class CollisionBroadcaster : MonoBehaviour
-    {
-        private ICollidable _model;
+	public class CollisionBroadcaster : MonoBehaviour
+	{
+		private ICollidable _model;
 
-        public void Initialize(ICollidable model)
-        {
-            _model = model;
-        }
+		public void Initialize(ICollidable model)
+		{
+			_model = model;
+		}
 
-        private void OnCollisionEnter(Collision other)
-        {
-            _model.OnCollisionEnter(other);
-        }
+		private void OnCollisionEnter(Collision other)
+		{
+			_model.OnCollisionEnter(other);	
+		}
 
-        private void OnCollisionStay(Collision other)
-        {
-            _model.OnCollisionStay(other);
-        }
+		private void OnCollisionStay(Collision other)
+		{
+			_model.OnCollisionStay(other);
+		}
 
-        private void OnCollisionExit(Collision other)
-        {
-            _model.OnCollisionExit(other);
-        }
-    }
+		private void OnCollisionExit(Collision other)
+		{
+			_model.OnCollisionExit(other);
+		}
+	}
 }
