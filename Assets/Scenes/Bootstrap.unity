@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982146217}
-  - component: {fileID: 1982146218}
   - component: {fileID: 1982146216}
+  - component: {fileID: 1982146218}
   m_Layer: 0
   m_Name: Inicialization
   m_TagString: Untagged
@@ -150,10 +150,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982146215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b180179a1a524d2bbc6e4fb7db360f70, type: 3}
+  m_Script: {fileID: 11500000, guid: 7266faf7779772e45bf5ff3415c596a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stateMachineFactory: {fileID: 1982146218}
+  _stateMachineFactory: {fileID: 0}
 --- !u!4 &1982146217
 Transform:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982146215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b511fd1a69c4b5cbe8f16c9adeb9358, type: 3}
+  m_Script: {fileID: 11500000, guid: 873cbcae9e968a040819797fbe256d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _level:
@@ -185,4 +185,4 @@ MonoBehaviour:
     LoadMode: 0
   _menu:
     Name: Menu
-    LoadMode: 0
+    LoadMode: 1
