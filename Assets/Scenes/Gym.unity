@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 16229114}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,6 +511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -562,6 +566,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 39826237}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &39826239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 39826237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &39826240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39826239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &63773269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1181,6 +1202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1232,6 +1257,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 303575485}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &303575487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 303575485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &303575488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303575487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &311087345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1245,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1624,6 +1666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1675,6 +1721,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 473274686}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &473274688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 473274686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &473274689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473274688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &477097380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1903,6 +1966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1954,6 +2021,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 532793461}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &532793463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 532793461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &532793464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532793463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &553425524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2038,6 +2122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2089,6 +2177,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 604670789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &604670791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 604670789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &604670792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604670791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612621874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,9 +2603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eb80d8e62d9d145bb50fb783c0f731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PositionMode: 0
-  m_RotationMode: 1
-  m_UpdateMethod: 2
+  m_PositionMode: 1
+  m_RotationMode: 0
+  m_UpdateMethod: 1
   m_Targets: []
 --- !u!4 &681964270
 Transform:
@@ -2590,6 +2695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2641,6 +2750,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 737275719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &737275721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 737275719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &737275722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737275721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &745628349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2651,6 +2777,10 @@ PrefabInstance:
     - target: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_Name
       value: ObstacleCylinder (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
@@ -2703,6 +2833,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 745628349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &745628351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 745628349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &745628352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745628351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &782602353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2713,6 +2860,10 @@ PrefabInstance:
     - target: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_Name
       value: ObstacleCylinder (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
@@ -2765,6 +2916,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 782602353}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &782602355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 782602353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &782602356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782602355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &793378524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2775,6 +2943,10 @@ PrefabInstance:
     - target: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_Name
       value: ObstacleCylinder (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
@@ -2827,6 +2999,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 793378524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &793378526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 793378524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &793378527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793378526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &834862014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2837,6 +3026,10 @@ PrefabInstance:
     - target: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_Name
       value: ObstacleCylinder (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
@@ -2889,6 +3082,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 834862014}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &834862016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 834862014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &834862017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834862016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &852382292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3152,7 +3362,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3516,7 +3726,7 @@ GameObject:
   - component: {fileID: 1128218473}
   m_Layer: 0
   m_Name: Basement
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3625,6 +3835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3676,6 +3890,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 1245877570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1245877572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 1245877570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1245877573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245877572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1291055489
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,7 +4272,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4798,7 +5029,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5454,7 +5685,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5697,7 +5928,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2e7f2bf72c08367498e1f9b29aa9c2f6, type: 2}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5862,6 +6093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleCylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 5579615337119118221, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5913,3 +6148,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8655182202085073647, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
   m_PrefabInstance: {fileID: 4317188790288609160}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4317188790288609162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382200789591585838, guid: 7d419f4005b636741b38acbeda454ccd, type: 3}
+  m_PrefabInstance: {fileID: 4317188790288609160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4317188790288609163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317188790288609162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b598bc7604ae6a396da34b0477765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
