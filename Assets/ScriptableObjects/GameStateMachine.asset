@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa78eaa5c6e3c649b4fc318628dd4ed, type: 3}
   m_Name: GameStateMachine
   m_EditorClassIdentifier: 
-  _states:
-  - {fileID: 0}
+  _states: []
