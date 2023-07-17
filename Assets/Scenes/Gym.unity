@@ -2613,7 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eb80d8e62d9d145bb50fb783c0f731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PositionMode: 1
+  m_PositionMode: 0
   m_RotationMode: 0
   m_UpdateMethod: 1
   m_Targets: []
@@ -3028,6 +3028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 819153558}
   - component: {fileID: 819153559}
+  - component: {fileID: 819153560}
   m_Layer: 5
   m_Name: LevelProgress
   m_TagString: Untagged
@@ -3103,10 +3104,26 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.572
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &819153560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819153557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a498c524fe6c340be3c09cc6b4a70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _start: {fileID: 625376301}
+  _end: {fileID: 2062444283}
+  _horde: {fileID: 681964270}
+  _slider: {fileID: 819153559}
 --- !u!1001 &852382292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6216,7 +6233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
       propertyPath: m_LocalRotation.w
