@@ -40,10 +40,11 @@ namespace Sources.CompositeRoot
 		[SerializeField] private EventTrigger _pathFinishTrigger;
 		[SerializeField] private string _groundTag;
 
-		[Header("Audio")]
-		[SerializeField] private AudioClip _pickupSound;
-		
-		[Header("Views")]
+        [Header("Sounds")]
+        [SerializeField] private AudioClip _pickupSound;
+        [SerializeReference] private AudioClip _deathSound;
+
+        [Header("Views")]
 		[SerializeField] private PhysicsTransformableView _playerView;
 		[SerializeField] private PhysicsTransformableView[] _otherViews = Array.Empty<PhysicsTransformableView>();
 
@@ -91,7 +92,7 @@ namespace Sources.CompositeRoot
 					new StickmanRunState(movement, StickmanAnimatorParameters.IsRunning),
 					new StickmanChargeState(model, _enemiesRoot.Entities, _chargePreferences, StickmanAnimatorParameters.Charge),
 					new StickmanAttackState(model, _enemiesRoot.Entities, _attackPreferences,audioSource, StickmanAnimatorParameters.IsPunching),
-					new StickmanDeathState(StickmanAnimatorParameters.IsDead),
+					new StickmanDeathState(audioSource, _deathSound,StickmanAnimatorParameters.IsDead),
 					new StickmanVictoryState(StickmanAnimatorParameters.Won)
 				}), out var stateMachine)
 				.ContinueWith(stateMachine.Enter<StickmanIdleState>)

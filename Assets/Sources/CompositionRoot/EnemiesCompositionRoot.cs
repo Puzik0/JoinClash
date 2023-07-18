@@ -31,6 +31,9 @@ namespace Sources.CompositeRoot
 
 		[Header("Used assets")]
 		[SerializeField] private AnimatorController _controller;
+
+		[Header("Sounds")]
+		[SerializeReference] private AudioClip _deathSound;
 		
 		[Header("Views")]
 		[SerializeField] private PhysicsTransformableView[] _enemies = Array.Empty<PhysicsTransformableView>();
@@ -67,7 +70,7 @@ namespace Sources.CompositeRoot
 					new StickmanWaitState(StickmanAnimatorParameters.Idle),
 					new StickmanChargeState(model, _hordeRoot.Entities, _chargePreferences, StickmanAnimatorParameters.Charge),
 					new StickmanAttackState(model, _hordeRoot.Entities, _attackPreferences, audioSource, StickmanAnimatorParameters.IsPunching),
-					new StickmanDeathState(StickmanAnimatorParameters.IsDead),
+					new StickmanDeathState(audioSource, _deathSound,StickmanAnimatorParameters.IsDead),
 					new StickmanVictoryState(StickmanAnimatorParameters.Won)
 				}), out var stateMachine)
 				.ContinueWith(stateMachine.Enter<StickmanWaitState>)
