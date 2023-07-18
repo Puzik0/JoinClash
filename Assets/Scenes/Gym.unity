@@ -5622,7 +5622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9035662, g: 0.44495374, b: 0.9339623, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5951,6 +5951,7 @@ GameObject:
   - component: {fileID: 1852248757}
   - component: {fileID: 1852248756}
   - component: {fileID: 1852248755}
+  - component: {fileID: 1852248758}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -6059,6 +6060,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852248753}
   m_CullTransparentMesh: 1
+--- !u!114 &1852248758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852248753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6cda612aed4e843abe9522241cff2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863574868
 GameObject:
   m_ObjectHideFlags: 0
