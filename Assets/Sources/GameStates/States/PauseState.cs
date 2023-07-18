@@ -9,7 +9,7 @@ namespace GameStates.States
         private float _timeScale;
         public void Enter()
         {
-            _timeScale = Time.time;
+            _timeScale = Time.timeScale;
             Time.timeScale = PauseTimeScale;
         }
 

@@ -21,7 +21,7 @@ namespace Infrastructure
 				new BootstrapState(_level, _menu, sceneLoading),
 				new GameplayStartState(_menu, sceneLoading),
 				new PauseState(),
-			new GameplayState()
+				new GameplayState()
 			};
 
 			return new GameStateMachine(states);

@@ -1,4 +1,6 @@
-﻿using Unity.VisualScripting;
+﻿using GameStates.Base;
+using GameStates.States;
+using StaticContext;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +14,13 @@ namespace UI
         private void Start()
         {
             Button button = GetComponent<Button>();
-            button.onClick.AddListener(()=>_pausePanel.SetActive(true));
+            button.onClick.AddListener(call: () =>
+            {
+                Instance<IGameStateMachine>.Value.Enter<PauseState>();
+                _pausePanel.SetActive(true);
+            });
+
+
         }
 
     }
