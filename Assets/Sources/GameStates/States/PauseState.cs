@@ -1,20 +1,23 @@
 ﻿using GameStates.Base;
 using UnityEngine;
+
 namespace GameStates.States
 {
-    public class GameplayState : IGameState
+    public class PauseState : IGameState
     {
-        private const float PauseTimeScale = 1.0f;
+        private const float PauseTimeScale = 0.0f;
         private float _timeScale;
-        void IGameState.Enter()
+        public void Enter()
         {
             _timeScale = Time.timeScale;
             Time.timeScale = PauseTimeScale;
         }
 
-        void IGameState.Exit()
+        public void Exit()
         {
             Time.timeScale = _timeScale;
         }
+
+
     }
 }
