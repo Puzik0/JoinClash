@@ -20,6 +20,6 @@ namespace Menu
 		private void EnterGameplayState(Touch touch) => 
 			Instance<IGameStateMachine>
 				.Value
-				.Enter<GameplayState>();
+				.Enter<GameplayStartState>();
 	}
 }

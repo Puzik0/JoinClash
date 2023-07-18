@@ -1,7 +1,9 @@
 ﻿using GameStates.Base;
 using GameStates.States;
 using SceneLoading;
+using UnityEditor;
 using UnityEngine;
+using PauseState = GameStates.States.PauseState;
 
 namespace Infrastructure
 {
@@ -13,11 +15,13 @@ namespace Infrastructure
 		public IGameStateMachine Initialize()
 		{
 			IAsyncSceneLoading sceneLoading = new AddressablesSceneLoading();
-			
+
 			IGameState[] states =
 			{
 				new BootstrapState(_level, _menu, sceneLoading),
-				new GameplayState(_menu, sceneLoading)
+				new GameplayStartState(_menu, sceneLoading),
+				new PauseState(),
+			new GameplayState()
 			};
 
 			return new GameStateMachine(states);
