@@ -998,7 +998,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &192481719
 PrefabInstance:
@@ -2544,11 +2544,13 @@ MonoBehaviour:
     AttackDistance: 2
   _attackPreferences:
     Damage: 10
-    TimeBetweenAttacks: 0.5
+    TimeBetweenAttacks: 1
+    Punchsound: {fileID: 8300000, guid: a715ddf00ff7f24469c72404e8df85e9, type: 3}
   _controller: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
   _pickTriggerZonePrefab: {fileID: 6639069702867901609, guid: 9e8c781130ce4164fbe691e4e801ff56, type: 3}
   _pathFinishTrigger: {fileID: 2062444287}
   _groundTag: Ground
+  _pickupSound: {fileID: 8300000, guid: 19fd88e818caf6a43be7c308aa0f9c92, type: 3}
   _playerView: {fileID: 2632625988852090728}
   _otherViews:
   - {fileID: 2030607882}
@@ -2639,8 +2641,9 @@ MonoBehaviour:
     Speed: 10
     AttackDistance: 2
   _attackPreferences:
-    Damage: 10
-    TimeBetweenAttacks: 0.5
+    Damage: 12
+    TimeBetweenAttacks: 1.2
+    Punchsound: {fileID: 8300000, guid: a715ddf00ff7f24469c72404e8df85e9, type: 3}
   _hordeRoot: {fileID: 612621877}
   _pathFinishTrigger: {fileID: 2062444287}
   _controller: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
@@ -4254,7 +4257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1054109947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 156859769}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1054109947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5735,7 +5750,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1693606701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 156859769}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1693606701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5987,7 +6014,7 @@ RectTransform:
   - {fileID: 1693606698}
   - {fileID: 298589118}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6148,7 +6175,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1852248756}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 156859769}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1852248756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,7 +6285,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5625, y: 1}
+    m_SensorSize: {x: 1.8270271, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6458,7 +6497,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1994612420 stripped
 Transform:

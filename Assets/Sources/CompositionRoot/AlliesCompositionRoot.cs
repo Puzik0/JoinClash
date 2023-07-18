@@ -39,6 +39,9 @@ namespace Sources.CompositeRoot
 		[Header("Scene")] 
 		[SerializeField] private EventTrigger _pathFinishTrigger;
 		[SerializeField] private string _groundTag;
+
+		[Header("Audio")]
+		[SerializeField] private AudioClip _pickupSound;
 		
 		[Header("Views")]
 		[SerializeField] private PhysicsTransformableView _playerView;
@@ -78,6 +81,8 @@ namespace Sources.CompositeRoot
 				.Initialize(surfaceSliding)
 				.RequireComponent<Animator>(out var animator)
 				.BindController(_controller)
+				.RequireComponent<AudioSource>(out var audioSource)
+				.TakeGameObject() 
 				.AddComponent<TickBroadcaster>()
 				.InitializeAs(new StickmanStateMachine(animator, new StickmanState[]
 				{
@@ -85,7 +90,7 @@ namespace Sources.CompositeRoot
 					new StickmanIdleState(movement, StickmanAnimatorParameters.Idle),
 					new StickmanRunState(movement, StickmanAnimatorParameters.IsRunning),
 					new StickmanChargeState(model, _enemiesRoot.Entities, _chargePreferences, StickmanAnimatorParameters.Charge),
-					new StickmanAttackState(model, _enemiesRoot.Entities, _attackPreferences, StickmanAnimatorParameters.IsPunching),
+					new StickmanAttackState(model, _enemiesRoot.Entities, _attackPreferences,audioSource, StickmanAnimatorParameters.IsPunching),
 					new StickmanDeathState(StickmanAnimatorParameters.IsDead),
 					new StickmanVictoryState(StickmanAnimatorParameters.Won)
 				}), out var stateMachine)
@@ -93,7 +98,11 @@ namespace Sources.CompositeRoot
 				.Append(_pickTriggerZonePrefab)
 				.GoToParent()
 				.AddComponent<Trigger>()
-				.Between<StickmanMovement, (StickmanHorde, StickmanMovement)>(movement, handler => handler.Item1.Add(movement))
+                .Between<StickmanMovement, (StickmanHorde, StickmanMovement)>(movement, handler =>
+                {
+                    handler.Item1.Add(movement);
+					audioSource.PlayOneShot(_pickupSound);
+                })
 				.OnTrigger(_pathFinishTrigger)
 				.Do(stateMachine.Enter<StickmanChargeState>)
 				.ContinueWith(() => model.Died += stateMachine.Enter<StickmanDeathState>);

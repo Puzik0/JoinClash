@@ -59,12 +59,14 @@ namespace Sources.CompositeRoot
 				.Initialize(model)
 				.RequireComponent<Animator>(out var animator)
 				.BindController(_controller)
+				.RequireComponent<AudioSource>(out var audioSource)
+				.TakeGameObject()
 				.AddComponent<TickBroadcaster>()
 				.InitializeAs(new StickmanStateMachine(animator, new StickmanState[]
 				{
 					new StickmanWaitState(StickmanAnimatorParameters.Idle),
 					new StickmanChargeState(model, _hordeRoot.Entities, _chargePreferences, StickmanAnimatorParameters.Charge),
-					new StickmanAttackState(model, _hordeRoot.Entities, _attackPreferences , StickmanAnimatorParameters.IsPunching),
+					new StickmanAttackState(model, _hordeRoot.Entities, _attackPreferences, audioSource, StickmanAnimatorParameters.IsPunching),
 					new StickmanDeathState(StickmanAnimatorParameters.IsDead),
 					new StickmanVictoryState(StickmanAnimatorParameters.Won)
 				}), out var stateMachine)
