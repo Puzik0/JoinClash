@@ -68,7 +68,11 @@ namespace Sources.CompositeRoot
 
 		public StickmanMovement Player { get; private set; }
 		
-		private StickmanMovement Compose(PhysicsTransformableView view)
+		public PhysicsTransformableView ViewOf(StickmanMovement stickman)
+		{
+			return _placedEntities[stickman];
+		}
+        private StickmanMovement Compose(PhysicsTransformableView view)
 		{
 			var health = new Health(_health);
 			var model = new Stickman(health, view.transform.position, view.transform.rotation);

@@ -2907,6 +2907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d19113d28bb6724caf24fb211392d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pickedsound: {fileID: 8300000, guid: 4d6224c341face540ac4978de62e529c, type: 3}
   _coins:
   - {fileID: 2059615833}
   - {fileID: 128499673}
@@ -2919,6 +2920,7 @@ MonoBehaviour:
   - {fileID: 145964171}
   _par: 5
   _currencyCompositionRoot: {fileID: 612621881}
+  _alliesRoot: {fileID: 612621876}
 --- !u!4 &615623417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
