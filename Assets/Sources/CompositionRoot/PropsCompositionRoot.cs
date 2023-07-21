@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Model.Currency;
+using Model.Props;
 using Model.Stickmen;
 using Sources.CompositeRoot.Base;
 using Sources.CompositeRoot.Extensions;
@@ -18,6 +20,9 @@ namespace Sources.CompositeRoot
         [SerializeField] private Trigger[] _coins = Array.Empty<Trigger>();
         [SerializeField] [Min(1)]private int _par;
 
+        [Header("Boosters")]
+        [SerializeField] private Trigger[] _boosters = Array.Empty<Trigger>();
+
         [Header("Roots")]
         [SerializeField] private CurrencyCompositionRoot _currencyCompositionRoot;
         [SerializeField] private AlliesCompositionRoot _alliesRoot;
@@ -28,13 +33,19 @@ namespace Sources.CompositeRoot
 
         public override void Compose()
         {
-            foreach (Trigger trigger in _coins) 
-            {
-                Coin model = new Coin(_par);
+            Compose(_coins,()=> new Coin(_par),Wallet.Add);
+            Compose(_boosters,() => new Booster(),null);
+        }
 
-                trigger.Between<Coin, (StickmanHorde, StickmanMovement)>(model, tuple=>
+        private void Compose<TModel>(IEnumerable<Trigger>triggers, Func<TModel> construction, Action<TModel>onTrigger)
+        {
+            foreach (Trigger trigger in triggers)
+            {
+                TModel model = construction.Invoke();
+
+                trigger.Between<TModel, (StickmanHorde, StickmanMovement)>(model, tuple =>
                 {
-                    Wallet.Add(model);
+                    onTrigger?.Invoke(model);
                     trigger.gameObject.SetActive(false);
 
                     (_, StickmanMovement stickman) = tuple;

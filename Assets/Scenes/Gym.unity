@@ -2919,6 +2919,9 @@ MonoBehaviour:
   - {fileID: 70455137}
   - {fileID: 145964171}
   _par: 5
+  _boosters:
+  - {fileID: 737767564}
+  - {fileID: 1059412352}
   _currencyCompositionRoot: {fileID: 612621881}
   _alliesRoot: {fileID: 612621876}
 --- !u!4 &615623417 stripped
@@ -3582,6 +3585,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1828454016024049598, guid: 3bca9442ca1ba784ca455839ef1f886a, type: 3}
   m_PrefabInstance: {fileID: 737767562}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &737767564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3909025612512651911, guid: 3bca9442ca1ba784ca455839ef1f886a, type: 3}
+  m_PrefabInstance: {fileID: 737767562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257eb79e2ebb9c04299cfce920409289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &745628349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4886,6 +4900,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1828454016024049598, guid: 3bca9442ca1ba784ca455839ef1f886a, type: 3}
   m_PrefabInstance: {fileID: 1059412350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1059412352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3909025612512651911, guid: 3bca9442ca1ba784ca455839ef1f886a, type: 3}
+  m_PrefabInstance: {fileID: 1059412350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257eb79e2ebb9c04299cfce920409289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1074769144
 PrefabInstance:
   m_ObjectHideFlags: 0
