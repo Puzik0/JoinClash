@@ -15,6 +15,8 @@ namespace Sources.View.UI
             _wallet= wallet;
             _wallet.Changed += OnWalletBalanceChanged;
 
+            OnWalletBalanceChanged();
+
         }
 
         private void OnDisable()

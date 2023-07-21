@@ -27,6 +27,7 @@ namespace Sources.CompositeRoot
                 trigger.Between<Coin, (StickmanHorde, StickmanMovement)>(model, tuple=>
                 {
                     Wallet.Add(model);
+                    trigger.gameObject.SetActive(false);
                 });
             }
         }
