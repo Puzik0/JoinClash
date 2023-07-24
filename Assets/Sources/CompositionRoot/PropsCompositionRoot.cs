@@ -21,21 +21,33 @@ namespace Sources.CompositeRoot
         [SerializeField] [Min(1)]private int _par;
 
         [Header("Boosters")]
+        [SerializeField] private Booster.Preferances _preferances;
         [SerializeField] private Trigger[] _boosters = Array.Empty<Trigger>();
 
         [Header("Roots")]
         [SerializeField] private CurrencyCompositionRoot _currencyCompositionRoot;
         [SerializeField] private AlliesCompositionRoot _alliesRoot;
-
+        [SerializeField] private HordeCompositionRoot _hordeRoot;
        
 
         private Wallet Wallet => _currencyCompositionRoot.Wallet;
 
+        private StickmanHordeMovement HordeMovement => _hordeRoot.HordeMovement;
+
+        private readonly List<Booster> _boostersToTick = new List<Booster>();
+
         public override void Compose()
         {
             Compose(_coins,()=> new Coin(_par),Wallet.Add);
-            Compose(_boosters,() => new Booster(),null);
+            Compose(_boosters,() => new Booster(_preferances, HordeMovement), booster =>
+            {
+                booster.Applay();
+                HordeMovement.Binde(booster);
+                _boostersToTick.Add(booster);
+            } );
         }
+        private void Update() => 
+            _boostersToTick.ForEach(x => x.Tick(Time.deltaTime));
 
         private void Compose<TModel>(IEnumerable<Trigger>triggers, Func<TModel> construction, Action<TModel>onTrigger)
         {

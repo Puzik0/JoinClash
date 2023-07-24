@@ -2920,11 +2920,15 @@ MonoBehaviour:
   - {fileID: 70455137}
   - {fileID: 145964171}
   _par: 5
+  _preferances:
+    Time: 1
+    SpeedMultiplier: 2
   _boosters:
   - {fileID: 737767564}
   - {fileID: 1059412352}
   _currencyCompositionRoot: {fileID: 612621881}
   _alliesRoot: {fileID: 612621876}
+  _hordeRoot: {fileID: 612621877}
 --- !u!4 &615623417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}

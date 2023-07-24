@@ -16,7 +16,7 @@ namespace Model.Stickmen
 
 		private readonly StickmanHorde _horde;
 		private readonly Preferences _preferences;
-		private InertialMovement _inertialMovement;
+		private readonly InertialMovement _inertialMovement;
 		
 		public StickmanHordeMovement(StickmanHorde horde, Preferences preferences)
 		{
@@ -43,8 +43,13 @@ namespace Model.Stickmen
 			return this;
 		}
 
+
         public MovementStats Stats() => 
 			new MovementStats(_preferences.MaxSpeed, _preferences.AccelerationTime);
+        public void Binde(IMovementStatsProvider provider)
+        {
+			_inertialMovement.Binde(provider);
+        }
 
         public void Accelerate(float deltaTime)
 		{

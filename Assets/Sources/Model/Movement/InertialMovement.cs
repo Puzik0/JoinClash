@@ -6,7 +6,7 @@ namespace Model
 {
 	public class InertialMovement
 	{
-        private readonly IMovementStatsProvider _provider;
+        private  IMovementStatsProvider _provider;
 
         public InertialMovement(IMovementStatsProvider provider)
         {
@@ -16,6 +16,12 @@ namespace Model
         public float Acceleration { get; private set; }
 
 		private MovementStats Stats => _provider.Stats();
+
+		public void Binde(IMovementStatsProvider provider)
+		{
+			_provider=provider;
+
+		}
 
 		public void Accelerate(float deltaTime)
 		{
