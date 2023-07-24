@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Model.Currency
 {
-    public class Wallet : MonoBehaviour
+    public class Wallet
     {
         public Wallet(int balance)
         {

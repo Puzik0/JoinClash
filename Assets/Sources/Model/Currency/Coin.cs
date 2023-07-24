@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Model.Currency
 {
-    public class Coin : MonoBehaviour
+    public class Coin
     {
         public readonly int Par;
 
