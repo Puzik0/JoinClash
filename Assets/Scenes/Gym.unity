@@ -2757,8 +2757,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesRoot: {fileID: 612621880}
   _distanceBetweenBounds: 9.6
-  _maxMovementSpeed: 10
-  _accelerationTime: 0.3
   _health: 100
   _chargePreferences:
     Speed: 15
@@ -2806,6 +2804,9 @@ MonoBehaviour:
   _camera: {fileID: 34744733}
   _allies: {fileID: 612621876}
   _targetGroup: {fileID: 681964269}
+  _preferences:
+    MaxSpeed: 10
+    AccelerationTime: 0.3
 --- !u!114 &612621878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2919,11 +2920,15 @@ MonoBehaviour:
   - {fileID: 70455137}
   - {fileID: 145964171}
   _par: 5
+  _preferances:
+    Time: 1
+    SpeedMultiplier: 2
   _boosters:
   - {fileID: 737767564}
   - {fileID: 1059412352}
   _currencyCompositionRoot: {fileID: 612621881}
   _alliesRoot: {fileID: 612621876}
+  _hordeRoot: {fileID: 612621877}
 --- !u!4 &615623417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7388972270694699884, guid: d93a05ef8026faf44a2d9f028ae4b459, type: 3}
