@@ -9,10 +9,10 @@ namespace Model.Stickmen
 		public readonly Stickman Model;
 		
 		private readonly SurfaceSliding _surfaceSliding;
-		private readonly InertialMovement _inertialMovement;
 		private readonly float _distanceBetweenBounds;
-		
-		private Vector3 _startMovePosition;
+
+        private InertialMovement _inertialMovement;
+        private Vector3 _startMovePosition;
 		
 		public StickmanMovement(Stickman model, SurfaceSliding surfaceSliding, InertialMovement inertialMovement, float distanceBetweenBounds)
 		{
@@ -30,6 +30,11 @@ namespace Model.Stickmen
 		
 		private float DistanceToBound => _distanceBetweenBounds / 2.0f;
 		
+		public void Bind(InertialMovement movement)
+		{
+			_inertialMovement=movement;
+		}
+
 		public void StartMovingRight()
 		{
 			_startMovePosition = Model.Position;

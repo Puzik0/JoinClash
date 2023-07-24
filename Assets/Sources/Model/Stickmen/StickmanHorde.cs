@@ -22,7 +22,6 @@ namespace Model.Stickmen
 
 		public void Add(StickmanMovement stickman)
 		{
-			stickman.StartMovingRight();
 			_stickmans.Add(stickman);
 			Added?.Invoke(stickman);
 		}

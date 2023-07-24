@@ -2757,8 +2757,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesRoot: {fileID: 612621880}
   _distanceBetweenBounds: 9.6
-  _maxMovementSpeed: 10
-  _accelerationTime: 0.3
   _health: 100
   _chargePreferences:
     Speed: 15
@@ -2806,6 +2804,9 @@ MonoBehaviour:
   _camera: {fileID: 34744733}
   _allies: {fileID: 612621876}
   _targetGroup: {fileID: 681964269}
+  _preferences:
+    MaxSpeed: 10
+    AccelerationTime: 0.3
 --- !u!114 &612621878
 MonoBehaviour:
   m_ObjectHideFlags: 0
