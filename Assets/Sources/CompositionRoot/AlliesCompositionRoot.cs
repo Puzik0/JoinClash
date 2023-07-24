@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Sources.Model.Movement;
 using Model;
 using Model.Components;
 using Model.Obstacles;
@@ -26,8 +27,6 @@ namespace Sources.CompositeRoot
 		
 		[Header("Preferences")]
 		[SerializeField] private float _distanceBetweenBounds;
-		[SerializeField] private float _maxMovementSpeed;
-		[SerializeField] private float _accelerationTime;
 		[SerializeField] private float _health;
 		[SerializeField] private StickmanChargeState.Preferences _chargePreferences;
 		[SerializeField] private StickmanAttackState.Preferences _attackPreferences;
@@ -76,7 +75,7 @@ namespace Sources.CompositeRoot
 		{
 			var health = new Health(_health);
 			var model = new Stickman(health, view.transform.position, view.transform.rotation);
-			var inertialMovement = new InertialMovement(_maxMovementSpeed, _accelerationTime);
+			var inertialMovement = new InertialMovement(new IMovementStatsProvider.None());
 			var surfaceSliding = new SurfaceSliding(_groundTag);
 			var movement = new StickmanMovement(model, surfaceSliding, inertialMovement, _distanceBetweenBounds);
 
