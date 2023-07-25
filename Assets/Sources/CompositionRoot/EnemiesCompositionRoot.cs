@@ -30,7 +30,7 @@ namespace Sources.CompositeRoot
 		[SerializeField] private EventTrigger _pathFinishTrigger;
 
 		[Header("Used assets")]
-		[SerializeField] private AnimatorController _controller;
+		[SerializeField] private RuntimeAnimatorController _stickmanController;
 
 		[Header("Sounds")]
 		[SerializeReference] private AudioClip _deathSound;
@@ -61,7 +61,7 @@ namespace Sources.CompositeRoot
 			view
 				.Initialize(model)
 				.RequireComponent<Animator>(out var animator)
-				.BindController(_controller)
+				.BindController(_stickmanController)
 				.RequireComponent<AudioSource>(out var audioSource)
 				.TakeGameObject()
 				.AddComponent<TickBroadcaster>()

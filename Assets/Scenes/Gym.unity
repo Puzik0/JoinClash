@@ -2871,7 +2871,7 @@ MonoBehaviour:
     Punchsound: {fileID: 8300000, guid: a715ddf00ff7f24469c72404e8df85e9, type: 3}
   _hordeRoot: {fileID: 612621877}
   _pathFinishTrigger: {fileID: 2062444287}
-  _controller: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
+  _stickmanController: {fileID: 9100000, guid: ee6d4ae46f3ab0340be8266e2647e47e, type: 2}
   _deathSound: {fileID: 8300000, guid: 3516c279da18eaa40b97de96d4d0356d, type: 3}
   _enemies:
   - {fileID: 931369055}
